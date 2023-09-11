@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'AtomicAlice-Regular';
+  font-weight: 400;
+  font-style: normal;
+  src: local('AtomicAlice-Regular'),
+      url('../fonts/AtomicAlice-Regular.woff2') format('woff2'),
+      url('../fonts/AtomicAlice-Regular.woff') format('woff');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'AtomicAlice-Medium';
+  font-weight: 500;
+  font-style: normal;
+  src: local('AtomicAlice-Medium'),
+    url('../fonts/AtomicAlice-Medium.woff2') format('woff2'),
+    url('../fonts/AtomicAlice-Medium.woff') format('woff');
+  font-display: swap;
+}

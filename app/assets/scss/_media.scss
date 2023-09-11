@@ -1,0 +1,135 @@
+@media (max-width: 1328px) {
+  .header-navigation__list {
+    width: 452px;
+    max-width: 646px;
+  }
+}
+@media (max-width: 1138px) {
+  .header-navigation__list {
+      width: 370px;
+  }
+  .header-navigation__item-link {
+    font-size: .92rem;
+  }
+  .header-buttons {
+    margin-left: 28px;
+  }
+  .header-buttons__login {
+    margin-left: 28px;
+  }
+}
+@media (max-width: 998px) {
+  .header {
+
+    &__burger-button {
+      display: block;
+      z-index: 99;
+    }
+  }
+  .header-navigation {
+    position: absolute;
+    right: -300px;
+    top: 0;
+    background-color: $header-blue;
+    z-index: 98;
+    transition: .3s;
+
+    &__list {
+      flex-direction: column;
+      height: 152px;
+      width: 180px;
+      padding: 160px 0 calc(312px - -40.6vh) 40px;
+      margin: 0;
+    }
+    &__item-link {
+      color: $white;
+    }
+  }
+  .header-navigation--active {
+    right: 0;
+    transition: .3s;
+  }
+  .header-buttons {
+    margin-left: auto;
+    z-index: 99;
+  }
+  .utp-title{
+    max-width: 570px;
+    font-size: 2.7rem;
+  }
+  .utp-links__list {
+    max-width: 460px;
+    justify-content: center;
+  }
+}
+@media (max-width: 732px) {
+  .container-top {
+    padding: 0 40px;
+  }
+  .header-buttons__order{
+    width: 134px;
+  }
+  .utp-buttons {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+
+    &__more {
+      margin-top: 20px;
+    }
+  }
+}
+@media (max-width: 640px) {
+  .container-top {
+      padding: 0 30px;
+    }
+  .utp-title {
+    max-width: 100%;
+    font-size: 2rem;
+  }
+}
+@media (max-width: 492px) {
+  .header-logo__img {
+    transform: scale(.8);
+  }
+  .header-buttons {
+    &__order,
+    &__login {
+      font-size: .9rem;
+    }
+    &__order {
+      width: 104px;
+    }
+    &__login {
+      margin-left: 20px;
+    }
+  }
+  .utp-title__label {
+    font-size: 1.1rem;
+  }
+  .utp-title {
+    font-size: 1.3rem;
+  }
+  .utp-links__item-link {
+    width: 314px;
+  }
+}
+@media (max-width: 410px) {
+  .container-top {
+    padding: 0 16px;
+  }
+  .header-logo {
+    width: 82px;
+
+    &__img {
+      transform: scale(.6);
+      margin-left: -16px;
+    }
+  }
+  .header__burger-button {
+    margin-left: 20px;
+  }
+  .utp-links__item-link {
+    width: 286px;
+  }
+}
