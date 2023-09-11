@@ -296,6 +296,7 @@ figure {
     max-height: 374px;
     width: 283px;
     overflow-y: scroll;
+    overflow-x: hidden;
 
     &::-webkit-scrollbar {  
       height: 10px;
@@ -310,6 +311,7 @@ figure {
       border-radius: 20px;
       background: $slider-bg-white;
       box-shadow: 10px 12px 21px 10px rgba(150, 175, 199, 0.30), -5px -5px 17px 0px $white;
+      cursor: pointer;
     }
     &::-webkit-scrollbar-corner {
       transform: scale(2);
@@ -325,9 +327,11 @@ figure {
       border-radius: 40px;
       background: $slider-bg-white;
       box-shadow: 4px 4px 14px 0px rgba(150, 175, 199, 0.30) inset;
+      transition: .3s;
     }
     &--active .second-slider__tabs-title {
       color: $blue-slider-button;
+      transition: .3s;
     }
     &+& {
       margin-top: 17px;
@@ -336,12 +340,14 @@ figure {
   &__tabs-content-item {
     display: none;
     height: 345px;
+    transition: .3s;
   }
   &__tabs-content-item-wrapp {
     display: flex;
   }
   &__tabs-content-item.second-slider__tabs-content-item--active {
     display: block;
+    transition: .3s;
   }
   &__tabs-content-title {
     width: 361px;
@@ -355,7 +361,7 @@ figure {
   }
   &__tabs-content-list {
     width: 235px;
-    margin: 20px 0 0 20px;
+    margin: 20px 0 0 24px;
     line-height: 120%;
   }
   &__tabs-content-list-item {

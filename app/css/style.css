@@ -402,6 +402,7 @@ figure {
   max-height: 374px;
   width: 283px;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 .second-slider__tabs::-webkit-scrollbar {
   height: 10px;
@@ -420,6 +421,7 @@ figure {
   background: #F6F8FC;
   -webkit-box-shadow: 10px 12px 21px 10px rgba(150, 175, 199, 0.3), -5px -5px 17px 0px #fff;
           box-shadow: 10px 12px 21px 10px rgba(150, 175, 199, 0.3), -5px -5px 17px 0px #fff;
+  cursor: pointer;
 }
 .second-slider__tabs::-webkit-scrollbar-corner {
   -webkit-transform: scale(2);
@@ -435,9 +437,15 @@ figure {
   background: #F6F8FC;
   -webkit-box-shadow: 4px 4px 14px 0px rgba(150, 175, 199, 0.3) inset;
           box-shadow: 4px 4px 14px 0px rgba(150, 175, 199, 0.3) inset;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
 .second-slider__tabs-item--active .second-slider__tabs-title {
   color: #1E2D95;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
 .second-slider__tabs-item + .second-slider__tabs-item {
   margin-top: 17px;
@@ -445,6 +453,9 @@ figure {
 .second-slider__tabs-content-item {
   display: none;
   height: 345px;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
 .second-slider__tabs-content-item-wrapp {
   display: -webkit-box;
@@ -453,6 +464,9 @@ figure {
 }
 .second-slider__tabs-content-item.second-slider__tabs-content-item--active {
   display: block;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
 .second-slider__tabs-content-title {
   width: 361px;
@@ -466,7 +480,7 @@ figure {
 }
 .second-slider__tabs-content-list {
   width: 235px;
-  margin: 20px 0 0 20px;
+  margin: 20px 0 0 24px;
   line-height: 120%;
 }
 .second-slider__tabs-content-list-item {
@@ -491,6 +505,21 @@ figure {
     width: 452px;
     max-width: 646px;
   }
+  .second-slider {
+    padding: 49px 14px 0 22px;
+  }
+  .second-slider__tabs-content-image {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    -webkit-transform: scale(0.8);
+        -ms-transform: scale(0.8);
+            transform: scale(0.8);
+    margin-left: 0;
+  }
+  .second-slider__tabs-content-text {
+    margin-left: 28px;
+  }
 }
 @media (max-width: 1138px) {
   .header-navigation__list {
@@ -504,6 +533,24 @@ figure {
   }
   .header-buttons__login {
     margin-left: 28px;
+  }
+  .second-slider__tabs-item {
+    width: 172px;
+    height: 78px;
+  }
+  .second-slider__tabs-content-image {
+    -webkit-transform: scale(0.7);
+        -ms-transform: scale(0.7);
+            transform: scale(0.7);
+  }
+  .second-slider__tabs-content-text {
+    margin-left: -22px;
+  }
+  .second-slider__tabs-content-title {
+    font-size: 0.9rem;
+  }
+  .second-slider__tabs-content-list-item {
+    font-size: 0.9rem;
   }
 }
 @media (max-width: 998px) {
@@ -548,11 +595,33 @@ figure {
     max-width: 570px;
     font-size: 2.7rem;
   }
+  .utp-links {
+    margin-top: 66px;
+  }
   .utp-links__list {
     max-width: 460px;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  .second-slider__tabs {
+    padding-right: 12px;
+  }
+  .second-slider__tabs-content-image {
+    display: none;
+  }
+  .second-slider__tabs-content-item.second-slider__tabs-content-item--active {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .second-slider__tabs-content-text {
+    margin: 0 auto;
+  }
+  .second-slider__tabs-content-list {
+    margin: 20px 0 0 80px;
+  }
+  .second-slider__tabs-item {
+    width: 148px;
   }
 }
 @media (max-width: 732px) {
@@ -561,6 +630,9 @@ figure {
   }
   .header-buttons__order {
     width: 134px;
+  }
+  .utp-title {
+    margin: 50px auto 0;
   }
   .utp-buttons {
     width: 100%;
@@ -575,14 +647,50 @@ figure {
   .utp-buttons__more {
     margin-top: 20px;
   }
+  .second-slider__tabs {
+    width: 240px;
+    padding-right: 202px;
+  }
+  .second-slider__tabs::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: 10px 12px 21px 10px rgba(150, 175, 199, 0.3), -5px -5px 17px 0px #fff;
+            box-shadow: 10px 12px 21px 10px rgba(150, 175, 199, 0.3), -5px -5px 17px 0px #fff;
+  }
+  .second-slider__tabs-content-title {
+    width: 316px;
+  }
 }
 @media (max-width: 640px) {
   .container-top {
     padding: 0 30px;
   }
+  .container-top {
+    padding: 0 20px;
+  }
   .utp-title {
     max-width: 100%;
     font-size: 2rem;
+  }
+  .second-slider {
+    padding: 49px 16px 0 0;
+  }
+  .second-slider__tabs {
+    padding-right: 90px;
+  }
+  .second-slider__tabs::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: 10px 12px 21px 10px rgba(150, 175, 199, 0.3), -5px -5px 17px 0px #fff;
+    box-shadow: -3px 12px 21px 10px rgba(150, 175, 199, 0.3), -5px -5px 17px 0px #fff;
+  }
+  .second-slider__tabs-title {
+    font-size: 0.9rem;
+  }
+  .second-slider__tabs-content-title {
+    width: 194px;
+    margin: 0 auto;
+    line-height: 23px;
+  }
+  .second-slider__tabs-content-list {
+    width: 190px;
+    margin: 20px 0 0 40px;
   }
 }
 @media (max-width: 492px) {
@@ -609,6 +717,39 @@ figure {
   .utp-links__item-link {
     width: 314px;
   }
+  .second-slider {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .second-slider__tabs {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 8px 0 42px 0;
+  }
+  .second-slider__tabs-item {
+    padding: 1px 23px;
+  }
+  .second-slider__tabs-item + .second-slider__tabs-item {
+    margin: 0 0 0 20px;
+  }
+  .second-slider__tabs-content-text {
+    margin: 40px 20px 0;
+  }
+  .second-slider__tabs-content-title, .second-slider__tabs-content-list {
+    width: 100%;
+  }
+  .second-slider__tabs-content-list {
+    margin-left: 9vw;
+  }
 }
 @media (max-width: 410px) {
   .container-top {
@@ -628,5 +769,8 @@ figure {
   }
   .utp-links__item-link {
     width: 286px;
+  }
+  .second-slider__tabs-content-list {
+    margin-left: 5vw;
   }
 }
