@@ -8,9 +8,7 @@
 Author: Maksym Palamaniuk
 Author URI: maxpalaman@gmail.com
 
-
 */
-
 
 /* Start page styles */
 body {
@@ -27,41 +25,39 @@ body {
   overflow-y: scroll;
   overflow-x: hidden;
 }
-
 h1 {
+  @extend %aa-400;
   font-size: 56px;
   line-height: 120%;
   color: #fff;
   text-align: center;
 }
-
-h2 {
-  font-size: 30px;
+h2,
+h3 {
+  font-size: 18px;
   font-weight: 500;
   line-height: 36px;
   color: #162a48;
   text-align: center;
 }
-
+h2 {
+  font-size: 20px;
+}
 ol,
 ul {
   padding: 0;
   padding-inline-start: 0;
 }
-
 li {
   list-style: none;
 }
-
 a {
   text-decoration: none;
   color: #fff;
+  &:hover {
+    color: #FFBE26;
+  }
 }
-
-a:hover {
-  color: #FFBE26
-}
-
 p {
   margin-block-start: 0;
   margin-block-end: 0;
@@ -69,32 +65,26 @@ p {
   margin-inline-end: 0;
   margin: 0;
 }
-
 button {
   padding: 0;
   margin: 0;
   background-color: transparent;
   border: none;
 }
-
 button:hover {
   background-color: transparent;
 }
-
 button,
 a {
   cursor: pointer;
 }
-
 blockquote {
   margin: 0;
   padding: 0;
 }
-
 figure {
   margin: 0;
 }
-
 .container-top {
   display: flex;
   align-items: center;
@@ -103,33 +93,12 @@ figure {
   padding: 0 80px;
   margin: 0 auto;
 }
-
 .container-body {
   max-width: 1300px;
   padding: 0 30px;
   margin: 0 auto;
 }
-
-.second *::-webkit-scrollbar {
-  height: 10px;
-  width: 6px;
-  border-radius: 99px;
-  background: #F6F8FC;
-  box-shadow: 4px 4px 14px 0px rgba(150, 175, 199, 0.30) inset;
-}
-
-.second *::-webkit-scrollbar-thumb {
-  border-radius: 40px;
-  background: #F6F8FC;
-  box-shadow: 10px 10px 21px 0px rgba(150, 175, 199, 0.30), -5px -5px 17px 0px #FFF;
-}
-
-.second *::-webkit-scrollbar-corner {
-  background: #F6F8FC;
-}
-
 /* start header */
-
 .header {
   position: sticky;
   display: flex;
@@ -191,9 +160,7 @@ figure {
 
   &__order,
   &__login {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @extend %flex-center;
     height: 55px;
     transition: .3s;
   }
@@ -206,7 +173,7 @@ figure {
     text-align: center;
     border-radius: 40px;
     background: $blue-button;
-    box-shadow: 10px 10px 21px 0px #0D1C7D, -5px -5px 17px 0px #0E1A6D;
+    box-shadow: 10px 10px 21px 0px $utp-span-blue, -5px -5px 17px 0px #0E1A6D;
   }
   &__login {
     margin-left: 57px;
@@ -235,9 +202,7 @@ figure {
 
   &__order,
   &__more {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @extend %flex-center;
     width: 298px;
     height: 56px;
     border-radius: 138px;
@@ -296,9 +261,7 @@ figure {
   }
   &__item-soon::before {
     content: 'скоро';
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @extend %flex-center;
     width: 40px;
     height: 12px;
     background-color: $yellow;
@@ -308,5 +271,106 @@ figure {
     color: $utp-span-blue!important;
   }
 }
+.second {
+  background-color: $light-blue;
+}
+.second-title {
+  max-width: 1088px;
+  margin: 80px auto 0;
+  color: $blue-title;
 
-@import 'media';
+  &__span {
+    color: $yellow;
+  }
+}
+.second-slider {
+  display: flex;
+  height: 458px;
+  margin: 60px auto 115px;
+  padding: 49px 57px 0 57px;
+  border-radius: 40px;
+  background: $slider-bg-white;
+  box-shadow: 10px 10px 21px 0px rgba(150, 175, 199, 0.30), -5px -5px 17px 0px $white;
+
+  &__tabs {
+    max-height: 374px;
+    width: 283px;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {  
+      height: 10px;
+      width: 14px;
+      border-radius: 99px;
+      transform: scale(2);
+      background: $slider-bg-white;
+      box-shadow: 5px 2px 5px 0px rgba(150, 175, 199, 0.30) inset;
+    }
+    &::-webkit-scrollbar-thumb {
+      transform: scale(2);
+      border-radius: 20px;
+      background: $slider-bg-white;
+      box-shadow: 10px 12px 21px 10px rgba(150, 175, 199, 0.30), -5px -5px 17px 0px $white;
+    }
+    &::-webkit-scrollbar-corner {
+      transform: scale(2);
+      background: $slider-bg-white;
+    }
+  }
+  &__tabs-item {
+    @extend %flex-center;
+    width: 247px;
+    height: 95px;
+  
+    &--active {
+      border-radius: 40px;
+      background: $slider-bg-white;
+      box-shadow: 4px 4px 14px 0px rgba(150, 175, 199, 0.30) inset;
+    }
+    &--active .second-slider__tabs-title {
+      color: $blue-slider-button;
+    }
+    &+& {
+      margin-top: 17px;
+    }
+  }
+  &__tabs-content-item {
+    display: none;
+    height: 345px;
+  }
+  &__tabs-content-item-wrapp {
+    display: flex;
+  }
+  &__tabs-content-item.second-slider__tabs-content-item--active {
+    display: block;
+  }
+  &__tabs-content-title {
+    width: 361px;
+    color: $blue-title;
+  }
+  &__tabs-content-image {
+    margin-left: 67px;
+  }
+  &__tabs-content-text {
+    margin-left: 80px;
+  }
+  &__tabs-content-list {
+    width: 235px;
+    margin: 20px 0 0 20px;
+    line-height: 120%;
+  }
+  &__tabs-content-list-item {
+    display: flex;
+
+    &::before {
+      content: url('../images/check.svg');
+      width: 23px;
+      height: 18px;
+      transform: translate(-21px, -27px);
+    }
+    &+& {
+      margin-top: 8px;
+    }
+  }
+}
+  
+  @import 'media';

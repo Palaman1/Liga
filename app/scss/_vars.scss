@@ -24,3 +24,9 @@ $utp-span-blue:#0D1C7D;
   font-family: "AtomicAlice-Medium";
   font-weight: 500;
 }
+
+%flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
