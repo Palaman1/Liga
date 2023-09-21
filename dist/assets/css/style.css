@@ -560,6 +560,7 @@ figure {
   }
   .header-navigation {
     position: absolute;
+    display: none;
     right: -300px;
     top: 0;
     background-color: #091876;
