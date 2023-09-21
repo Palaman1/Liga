@@ -683,6 +683,7 @@ figure {
   }
   .second-slider__tabs-title {
     font-size: 0.9rem;
+    line-height: 18px;
   }
   .second-slider__tabs-content-title {
     width: 194px;
